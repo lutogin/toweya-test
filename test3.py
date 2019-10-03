@@ -31,7 +31,7 @@ class LeagueTable:
         self.players[player]['score'] += score
         self.players[player]['counter_game'] += 1
 
-    def player_rank(self, place):
+    def player_rank(self, place: int):
         """Выводит игрока, по переданному месту в таблице."""
         return sorted(self.players, key=lambda plr: (self.players[plr]['score'], self.players[plr]['counter_game']))[place-1]
 
